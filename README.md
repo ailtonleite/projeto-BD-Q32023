@@ -6,6 +6,15 @@ Após uma breve conversa com um grupo de Designers que trabalham como freelancer
 
 Um usuário comum pode se cadastrar e solicitar um banner, logotipo ou uma imagem para publicidade, por exemplo. Um Designer pode atender e receber pagamento pelo pedido, de acordo com sua especialidade e a solicitação do usuário.
 
+## Relatório
+O grupo de designers precisará das seguintes informações:
+- usuários que são designers
+- pedidos em aberto
+- pedidos em atendimento
+- pedidos que estão atrasados 
+- numero de pedidos por tipo
+- total movimentado no mes
+
 ## Planejamento
 
 - Diagrama que foi desenhado com o grupo de Designers:
