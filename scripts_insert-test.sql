@@ -2,7 +2,7 @@ INSERT INTO `dbprojetod`.`tb_usuario`
 (`nome`,`numero_cpf`,`email`,`telefone`)
 VALUES
 ('Thiago R', '01010101010', 'thiagor@email.com', '05513910101010'),
-('Tiago Sudden', '12312312311', 'sudden@email.com', '05513911111111');
+('Tiago Sudden', '12312312311', 'sudden@email.com', '05513911111111'),
 ('Ailton Leite', '12345678910', 'ailton@email.com', '05511912345678'),
 ('Thalita Chavez', '11223344556', 'thalita@email.com', '05512987654321'),
 ('Danic Silva', '98765432100', 'danic@email.com', '05515900000000'),
