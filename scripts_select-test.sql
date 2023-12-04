@@ -40,12 +40,12 @@ WHERE tb_pedido.status = 'Atendimento';
 PEDIDOS EM ATRASO: Retornar todos os pedidos que estão sendo atendidos, porem atrasados.
 */
 SELECT * FROM tb_pedido
-WHERE tb_pedido.data_estimada > CURRENT_DATE();
+WHERE tb_pedido.data_estimada < CURRENT_DATE();
 
 /*
 PEDIDOS POR TIPO: Retornar a quantidade de pedidos por categoria.
 */
-SELECT tb_tipopedido.nome_tipo_pedido, COUNT(b_pedido.num_pedido) AS quantidade_pedidos
+SELECT tb_tipopedido.nome_tipo_pedido, COUNT(tb_pedido.num_pedido) AS quantidade_pedidos
 FROM tb_tipopedido LEFT JOIN tb_pedido
 ON tb_tipopedido.id_tipo = tb_pedido.tb_tipopedido_id_tipo
 GROUP BY tb_tipopedido.nome_tipo_pedido;
@@ -53,6 +53,6 @@ GROUP BY tb_tipopedido.nome_tipo_pedido;
 /*
 FATURAMENTO POR MÊS: Retornar o total faturado por mês.
 */
-SELECT SUM(tb_transacao) AS valor_total_faturado FROM tb_transacao
+SELECT SUM(tb_transacao.valor) AS valor_total_faturado FROM tb_transacao
 INNER JOIN tb_pedido ON tb_transacao.tb_pedido_num_pedido = tb_pedido.num_pedido
-WHERE tb_pedido.status = 'Finalziado' AND MONTH(tb_pedido.data_fim) = 12
+WHERE tb_pedido.status = 'Finalizado' AND MONTH(tb_pedido.data_fim) = 12
